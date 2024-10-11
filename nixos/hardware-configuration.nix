@@ -9,25 +9,25 @@
     ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
-  boot.initrd.kernelModules = [ "nvidia" "i915" "nvidia-modeset" "nvidia_uvm" "nvidia-drm" ];
+  boot.initrd.kernelModules = [ "nvidia" "i915" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
   boot.kernelModules = [ "kvm-amd" ];
-  boot.kernelParams = [ "nvidia.NVreg_PreserveVideoMemoryAllocations=1" ];
   boot.extraModulePackages = [ ];
+  boot.kernelParams = [ "nvidia.NVreg_PreserveVideoMemoryAllocations=1" ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/56f33ee5-305b-4d35-aa59-e0b65dc811c1";
+    { device = "/dev/disk/by-uuid/93238e56-1143-4e2f-b26d-d2cc72010981";
       fsType = "btrfs";
       options = [ "subvol=@" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/0866-79F1";
+    { device = "/dev/disk/by-uuid/639A-186D";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/35669480-5e4d-448f-8fbc-125108026a34"; }
+    [ { device = "/dev/disk/by-uuid/b23be52f-3b1d-47b9-bef8-22608e129ad3"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

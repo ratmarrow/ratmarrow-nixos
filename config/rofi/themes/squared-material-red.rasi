@@ -11,7 +11,7 @@
     bg1:     #404040;
     fg0:     #eeffff;
 
-    accent-color:     #ff0067;
+    accent-color:     #f05447;
     urgent-color:     #ffcb6b;
 
     background-color:   transparent;
@@ -26,7 +26,7 @@ window {
     location:   center;
     width:      480;
 
-    border-color: #ff0067;
+    border-color: #f05447;
     border: 2px;
 
     background-color:   @bg0;
