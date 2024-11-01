@@ -1,0 +1,81 @@
+//   _____ _____ _____ _____ _____ _____ _____ _____ _____ 
+//  |   __|  _  |   __|_   _|   __|   __|_   _|     |  |  |
+//  |   __|     |__   | | | |   __|   __| | | |   --|     |
+//  |__|  |__|__|_____| |_| |__|  |_____| |_| |_____|__|__|  NYARCH
+//
+//  by Bina
+
+                                                       
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+	    "source": "~/.config/fastfetch/nixos-logo.png",
+	    "type": "kitty",
+	    "height": 12,
+	    "padding": {
+		    "top": 1
+	    }
+    },
+    "display": {
+        "separator": " "
+    },
+    "modules": [
+        "break",
+        "break",
+        {
+            "type": "title",
+            "color": {
+            	"user": "38",
+            	"at": "38",
+            	"host": "38"
+            },
+            "key": "user {#36}▰",
+            "keyColor": "34",
+        },
+        {
+            "type": "os",
+            "format": "{pretty-name}",
+            "key": "os {#36}▰",
+            "keyColor": "34",  // = color4
+        },
+        {
+            "type": "kernel",
+            "key": "kernel {#36}▰",
+            "keyColor": "34",
+        },
+        {
+            "type": "packages",
+            "format": "{}",
+            "key": "pkgs {#36}▰",
+            "keyColor": "34",  
+        },
+        {
+            "type": "shell",
+            "format": "{exe-name}",
+            "key": "shell {#36}▰",
+            "keyColor": "34", 
+        },
+        {
+            "type": "terminal",
+            "format": "{pretty-name}",
+            "key": "term {#36}▰",
+            "keyColor": "34", 
+        },
+        {
+            "type": "wm",
+            "key": "de/wm {#36}▰",
+            "keyColor": "34", 
+        },
+        {
+            "type": "uptime",
+            "key": "uptime {#36}▰",
+            "keyColor": "34", 
+        },
+        "break",
+        {
+            "type": "colors",
+            "symbol": "circle",
+        },
+        "break",
+    ]
+}
